@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ikke …, men …-finner (kun tekst)</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; line-height: 1.35; }
+    .wrap { max-width: 900px; margin: 0 auto; }
+    .card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; margin: 16px 0; }
+    textarea, input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 10px; font-size: 14px; box-sizing: border-box; }
+    button { padding: 10px 14px; border: 1px solid #999; border-radius: 10px; background: #f5f5f5; cursor: pointer; }
+    button:disabled { opacity: 0.6; cursor: not-allowed; }
+    .muted { color: #666; font-size: 13px; }
+    .count { font-size: 18px; font-weight: 650; }
+    ul { padding-left: 18px; }
+    li { margin: 10px 0; }
+    code { background: #f2f2f2; padding: 2px 6px; border-radius: 6px; }
+    .row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .error { color: #b00020; }
+    .ok { color: #1b5e20; }
+    .pill { display:inline-block; padding:2px 8px; border-radius:999px; border:1px solid #ddd; font-size:12px; }
+    b.hi { font-weight: 800; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    .version { font-size: 12px; color: #444; margin-top: 6px; }
+    .grid2 { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    @media (min-width: 900px) { .grid2 { grid-template-columns: 1fr 1fr; } }
+    .grid4 { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    @media (min-width: 900px) { .grid4 { grid-template-columns: 1fr 1fr; } }
+    label { display:block; margin-bottom:6px; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Finn setninger med “Ikke …, men …”</h1>
+  <div class="version"><b>Versjon:</b> 2026-01-10 • v4.1 (setninger_totalt)</div>
+
+  <div class="card">
+    <p class="muted">
+      Lim inn tekst. Fyll inn metadata først hvis du vil at de skal med i YAML.
+    </p>
+
+    <h3 style="margin-top:0;">Metadata</h3>
+    <div class="grid4">
+      <div>
+        <label for="url"><b>URL</b></label>
+        <input id="url" type="url" placeholder="https://…" />
+      </div>
+      <div>
+        <label for="avis"><b>Avis</b></label>
+        <input id="avis" type="text" />
+      </div>
+      <div>
+        <label for="skribent"><b>Skribent</b></label>
+        <input id="skribent" type="text" />
+      </div>
+      <div>
+        <label for="publ_dato"><b>Publiseringsdato</b></label>
+        <input id="publ_dato" type="date" />
+      </div>
+    </div>
+
+    <hr style="border:none;border-top:1px solid #eee;margin:16px 0;" />
+
+    <label for="text"><b>Tekst</b></label>
+    <textarea id="text" rows="10" placeholder="Lim inn tekst her…"></textarea>
+
+    <div class="row" style="margin-top:10px;">
+      <button id="analyze">Analyser</button>
+      <button id="clear">Tøm</button>
+      <span class="pill">Dedupe før analyse</span>
+    </div>
+
+    <div id="status" class="muted" style="margin-top:10px;"></div>
+    <div id="err" class="error" style="margin-top:8px;"></div>
+  </div>
+
+  <div class="card">
+    <div class="count" id="count">Antall setninger: –</div>
+    <div class="muted" id="meta"></div>
+    <ul id="results"></ul>
+  </div>
+
+  <div class="card">
+    <h3>Kopier resultat som YAML</h3>
+    <div class="row">
+      <button id="copyYamlBlock" disabled>Kopier YAML-blokk</button>
+      <button id="copyYamlListItem" disabled>Kopier som listeelement</button>
+    </div>
+
+    <div class="grid2" style="margin-top:12px;">
+      <textarea id="yamlOut" class="mono" rows="14" readonly></textarea>
+      <textarea id="yamlListOut" class="mono" rows="14" readonly></textarea>
+    </div>
+  </div>
+</div>
+
+<script>
+  const $ = (id) => document.getElementById(id);
+  const matchPattern = /ikke\s+(.+?)\s*,\s*men\s+(.+?)(?=[.!?;]|$|\n)/gi;
+  const highlightWords = /(\bikke\b|\bmen\b)/gi;
+  let lastResult = null;
+
+  const normalizeWhitespace = s => (s||"").replace(/\r\n/g,"\n").replace(/[ \t]+/g," ").replace(/\n{3,}/g,"\n\n").trim();
+
+  const splitIntoSentences = text =>
+    (text.match(/[^.!?;\n]+[.!?;]?/g) || []).map(s=>s.trim()).filter(Boolean);
+
+  const dedupeSentences = sentences => {
+    const seen = new Set(), out=[];
+    for (const s of sentences) {
+      const k = s.replace(/[ \t]+/g," ").trim();
+      if (!k || seen.has(k)) continue;
+      seen.add(k); out.push(k);
+    }
+    return out;
+  };
+
+  const findMatchingSentences = sentences => sentences.filter(s => {
+    matchPattern.lastIndex = 0; return matchPattern.test(s);
+  });
+
+  const countTotalMatchesAcrossSentences = sentences => {
+    let n=0;
+    for (const s of sentences) {
+      matchPattern.lastIndex=0;
+      while (matchPattern.exec(s)) n++;
+    }
+    return n;
+  };
+
+  const formatPercent = (n,d) => d ? ((n/d*100).toFixed(1).replace(/\.0$/,"")+"%") : "0%";
+  const todayISODate = () => new Date().toISOString().slice(0,10);
+
+  const makeHighlightedSentenceNode = s => {
+    const frag=document.createDocumentFragment();
+    s.split(highlightWords).forEach(p=>{
+      if (!p) return;
+      if (/^(ikke|men)$/i.test(p)) { const b=document.createElement("b"); b.className="hi"; b.textContent=p; frag.appendChild(b); }
+      else frag.appendChild(document.createTextNode(p));
+    });
+    return frag;
+  };
+
+  const yamlQuote = s => `"${String(s??"").replace(/\\/g,"\\\\").replace(/"/g,'\\"').replace(/\n/g,"\\n")}"`;
+
+  const toYamlBlock = r => [
+    `dato: ${yamlQuote(r.dato)}`,
+    `antall: ${r.antall}`,
+    `setninger_totalt: ${r.setninger_totalt}`,
+    `prosent_ikke_men: ${yamlQuote(r.prosent_ikke_men)}`,
+    `publ_dato: ${yamlQuote(r.publ_dato)}`,
+    `skribent: ${yamlQuote(r.skribent)}`,
+    `avis: ${yamlQuote(r.avis)}`,
+    `url: ${yamlQuote(r.url)}`,
+    `setninger:`,
+    ...(r.setninger.length ? r.setninger.map(s=>`  - ${yamlQuote(s)}`) : [`  []`])
+  ].join("\n");
+
+  const toYamlListItem = r =>
+    toYamlBlock(r).split("\n").map((l,i)=>i?`    ${l}`:`  - ${l}`).join("\n");
+
+  const reset = () => {
+    $("yamlOut").value=""; $("yamlListOut").value="";
+    $("copyYamlBlock").disabled=true; $("copyYamlListItem").disabled=true;
+    $("results").innerHTML=""; $("count").textContent="Antall setninger: –"; $("meta").textContent="";
+  };
+
+  $("analyze").onclick = () => {
+    const text = normalizeWhitespace($("text").value);
+    if (!text) return;
+    const uniq = dedupeSentences(splitIntoSentences(text));
+    const matches = findMatchingSentences(uniq);
+    const totalMatches = countTotalMatchesAcrossSentences(uniq);
+    const pct = formatPercent(matches.length, uniq.length);
+
+    $("results").innerHTML="";
+    matches.forEach(s=>{ const li=document.createElement("li"); li.appendChild(makeHighlightedSentenceNode(s)); $("results").appendChild(li); });
+
+    $("count").textContent = `Antall setninger: ${matches.length} (${pct})`;
+    $("meta").textContent = `Setninger totalt (unike): ${uniq.length}. Treff totalt: ${totalMatches}.`;
+
+    lastResult = {
+      dato: todayISODate(),
+      antall: matches.length,
+      setninger_totalt: uniq.length,
+      prosent_ikke_men: pct,
+      publ_dato: $("publ_dato").value || "",
+      skribent: $("skribent").value || "",
+      avis: $("avis").value || "",
+      url: $("url").value || "",
+      setninger: matches.slice()
+    };
+
+    $("yamlOut").value = toYamlBlock(lastResult);
+    $("yamlListOut").value = toYamlListItem(lastResult);
+    $("copyYamlBlock").disabled=false; $("copyYamlListItem").disabled=false;
+  };
+
+  $("clear").onclick = () => { $("text").value=""; reset(); };
+  $("copyYamlBlock").onclick = () => navigator.clipboard.writeText($("yamlOut").value);
+  $("copyYamlListItem").onclick = () => navigator.clipboard.writeText($("yamlListOut").value);
+</script>
+</body>
+</html>
