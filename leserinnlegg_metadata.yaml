@@ -1,0 +1,260 @@
+# orekomsten av setninger med konstruksjonen "ikke...., men...." i debattinnlegg i norske aviser
+# Data er laget ved å klippe og lime
+
+analyser:
+  - dato: "2026-01-10"
+    antall: 14
+    setninger_totalt: 159
+    prosent_ikke_men: "8.8%"
+    publ_dato: "2025-12-12"
+    skribent: "Asle Toje"
+    avis: "Aftenposten"
+    url: "https://www.aftenposten.no/meninger/debatt/i/8pmm5G/asle-toje-vil-norge-overleve-det-som-kommer"
+    setninger:
+      - "Til syvende og sist handler nasjonens liv ikke først og fremst om lover, men om kultur, skriver Asle Toje."
+      - "Nettopp derfor skal vi huske – ikke for å vende fremtiden ryggen, men for å kjenne oss selv."
+      - "Det norske middelalderkongedømmet falt ikke først på slagmarken, men i sin egen selvforståelse."
+      - "Det er ikke sverdene som feller et folk først, men elitene."
+      - "Spørsmålet er derfor ikke hva som truer oss utenfra, men hva som holder oss sammen innenfra."
+      - "Et folk er ikke et prosjekt man kan starte på nytt, men et løfte som går fra slekt til slekt: å føre videre det man har arvet, ikke fordi det er feilfritt, men fordi det er ens eget."
+      - "Nasjoner dør ikke av hat, men av glemsel."
+      - "Internett har ikke utslettet språkene, men gitt dem nye rom."
+      - "Vi kan bygge forsvarsverker mot glemselen – ikke ved å fryse fast i rav, men ved å fornye det vi elsker."
+      - "Derfor er nasjonens liv ikke skjebne, men arbeid."
+      - "Tradisjon er ikke å bevare asken, men å holde ilden ved like."
+      - "Til syvende og sist handler nasjonens liv ikke først og fremst om lover, men om kultur."
+      - "Kjærlighet til fedrelandet er derfor ikke sentimentalitet, men en plikt."
+      - "Ikke ut av overlegenhet, men vilje til å bære byrden sammen."
+
+  - dato: "2026-01-10"
+    antall: 3
+    setninger_totalt: 112
+    prosent_ikke_men: "2.7%"
+    publ_dato: "2026-07-01"
+    skribent: "Noor Jdid"
+    avis: "Aftenposten"
+    url: "https://www.aftenposten.no/meninger/debatt/i/2pGa5q/enhetskulturen-er-et-historisk-mer-sammensatt-prosjekt-enn-asle-toje-antyder-skriver-noor-jdid"
+    setninger:
+      - "Poenget er ikke å moralisere over fortiden, men å slå fast at det Toje omtaler som en enhetskultur, aldri har vært statisk eller inkluderende i seg selv."
+      - "Nasjoner formes ikke bare gjennom det som samler, men også gjennom grensedragninger – mellom «oss» og «dem»."
+      - "Toje har i ettertid presisert at han ikke mener norskhet er en blodlinje, men at norskhet handler om det å ha «kjennskap til felles referanser, institusjoner og normer», og at kontinuitet og minne er «prosesser som læres, deles og praktiseres over tid»."
+
+  - dato: "2026-01-10"
+    antall: 1
+    setninger_totalt: 117
+    prosent_ikke_men: "0.9%"
+    publ_dato: "2026-09-01"
+    skribent: "Luqman Wadood"
+    avis: "Aftenposten"
+    url: "https://www.aftenposten.no/meninger/debatt/i/0pne20/jeg-heier-paa-en-aerligere-debatt-om-innvandring"
+    setninger:
+      - "Mislykket innvandring ødelegger ikke bare for etniske nordmenn, men også for integrerte minoriteter."
+
+  - dato: "2026-01-10"
+    antall: 10
+    setninger_totalt: 138
+    prosent_ikke_men: "7.2%"
+    publ_dato: "2026-08-01"
+    skribent: "Sylo Taraku"
+    avis: "Aftenposten"
+    url: "https://www.aftenposten.no/meninger/kronikk/i/16ngJB/norsk-identitet-kan-hverken-laases-fast-i-fortiden-eller-toemmes-for-historie"
+    setninger:
+      - "Resultatet er ikke kaos, men en skjør fred – et samfunn som fungerer, men uten dybde."
+      - "Romanen undersøker dermed ikke først og fremst skyld eller forsoning, men betydningen av historie som struktur."
+      - "»: at nasjonen ikke bare er en juridisk eller organisatorisk enhet, men et kulturelt og historisk fellesskap."
+      - "At kongen har beklaget statens behandling av samene, og at norske myndigheter har erkjent svikt i behandlingen av jøder under andre verdenskrig, er ikke uttrykk for nasjonal selvforakt, men for historisk modenhet."
+      - "Andre verdenskrig har fått en sentral plass i den norske kollektive hukommelsen, ikke bare som heltehistorie, men som erfaring av okkupasjon, tap og motstand – formidlet gjennom skole, ritualer og kulturliv."
+      - "Slike traumer minner oss om at fellesskap ikke bare bygges gjennom det vi feirer, men også gjennom det vi bærer sammen."
+      - "Å være en nasjon handler derfor ikke bare om å dele et territorium eller et sett lover, men om å dele en fortelling – vel vitende om at denne fortellingen rommer både kollektiv stolthet, kritisk erkjennelse og traumer."
+      - "Spørsmålet er ikke om vi skal huske, men hvordan."
+      - "Denne utviklingen har ikke funnet sted i et samfunn i oppløsning, men i et levende samfunn som fortsatt preges av høy grad av tillit, sterke fellesskapsinstitusjoner og et bemerkelsesverdig nasjonalt samhold."
+      - "Innvandrere er ikke bare lesere av norsk historie, men også medforfattere av den."
+
+  - dato: "2026-01-10"
+    antall: 0
+    setninger_totalt: 128
+    prosent_ikke_men: "0%"
+    publ_dato: "2026-01-09"
+    skribent: "Frank Rossavik"
+    avis: "Aftenposten"
+    url: "https://www.aftenposten.no/meninger/kommentar/i/8pmnkA/ridder-av-det-ulne-ord"
+    setninger:
+      [ ]
+
+  - dato: "2026-01-10"
+    antall: 0
+    setninger_totalt: 120
+    prosent_ikke_men: "0%"
+    publ_dato: "2026-06-01"
+    skribent: "Halvor Hegtun"
+    avis: "Aftenposten"
+    url: "https://www.aftenposten.no/meninger/kommentar/i/Ardy0q/toje-er-klar-som-blekk"
+    setninger:
+      []
+
+  - dato: "2026-01-10"
+    antall: 0
+    setninger_totalt: 113
+    prosent_ikke_men: "0%"
+    publ_dato: "2026-04-01"
+    skribent: "Simen Sandelien"
+    avis: "Aftenposten"
+    url: "https://www.aftenposten.no/meninger/debatt/i/wrPm4d/det-er-ikke-konservativt-aa-la-masseinnvandringen-fortsette-det-er-rad"
+    setninger:
+      []
+
+  - dato: "2026-01-10"
+    antall: 0
+    setninger_totalt: 119
+    prosent_ikke_men: "0%"
+    publ_dato: "2026-01-03"
+    skribent: "Mozzie Marvati"
+    avis: "Aftenposten"
+    url: "https://www.aftenposten.no/meninger/debatt/i/JOo4gP/asle-toje-la-meg-fortelle-deg-om-svaleflokken"
+    setninger:
+      []
+
+  - dato: "2026-01-10"
+    antall: 8
+    setninger_totalt: 132
+    prosent_ikke_men: "6.1%"
+    publ_dato: ""
+    skribent: "Asle Toje"
+    avis: "Aftenposten"
+    url: "https://www.aftenposten.no/meninger/debatt/i/L4AGOR/om-nasjon-analyse-og-avsporinger"
+    setninger:
+      - "At staten i ytterste konsekvens kan kreve borgernes liv, er ikke patos, men kjernen i både kongens og statsministerens nyttårsbudskap, skriver Asle Toje."
+      - "Når jeg bruker metaforer som minne, kontinuitet og arv, er det ikke for å mystifisere nasjonen eller gjøre den til et moralsk rangeringsprosjekt, men for å beskrive hvordan politiske fellesskap faktisk opprettholdes over tid."
+      - "Å erkjenne dette er ikke å undergrave rettsstaten, men å forklare dens forutsetninger."
+      - "Hva som holder et samfunn sammen i krisetider, er ikke et sentimentalt anliggende, men et klassisk politisk problem"
+      - "At staten i ytterste konsekvens kan kreve borgernes liv, er ikke patos, men kjernen i både kongens og statsministerens nyttårsbudskap."
+      - "Hva som holder et samfunn sammen i krisetider, er ikke et sentimentalt anliggende, men et klassisk politisk problem."
+      - "Å reise dette spørsmålet er ikke å romantisere offer, men å ta samfunnets utfordringer på alvor."
+      - "At både majoritet og minoritet søker miljøer der de kan leve komfortabelt med sin identitet, er ikke et argument mot fellesskap, men en påminnelse om at fellesskap ikke oppstår av seg selv."
+
+  - dato: "2026-01-10"
+    antall: 3
+    setninger_totalt: 198
+    prosent_ikke_men: "1.5%"
+    publ_dato: ""
+    skribent: "Kristin Clemet"
+    avis: "Aftenposten"
+    url: "https://www.aftenposten.no/meninger/i/rrA1ae/clemet-svarer-hva-mener-toje-at-vi-boer-gjoere"
+    setninger:
+      - "Det er ikke sikkert at det er Tojes ideal, men det er neppe noe land i verden som bruker mer offentlige penger på egen kunst og kultur."
+      - "Det vi i hovedsak snakker om, er praktiseringen av asylsystemet (eller om det bør endres) og reglene for såkalt familiegjenforening (som for øvrig ikke alltid bare er «gjenforening», men også «etablering» av familier) – og integreringspolitikken overfor dem som kommer til Norge."
+      - "Men forutsetningen for at de skal bli løst, er at vi ikke blir lammet av frykt og pessimisme, men diskuterer mulige løsninger på en åpen og konkret måte."
+
+  - dato: "2026-01-10"
+    antall: 7
+    setninger_totalt: 124
+    prosent_ikke_men: "5.6%"
+    publ_dato: ""
+    skribent: "Mustafa Can"
+    avis: "Aftenposten"
+    url: "https://www.aftenposten.no/meninger/debatt/i/xrPylR/det-er-ynkelig-aa-gjemme-seg-bak-feillesning-naar-kritikken-kommer"
+    setninger:
+      - "Det mest avslørende med Asle Tojes tekster om nasjonen og dens påståtte krise er ikke hva han skriver, men hvor raskt han i et svarinnlegg forsøker å omskrive det."
+      - "Det er også her nasjonalister vil eie minnet – ikke for å forstå fortiden, men for å gjøre den til en retning."
+      - "Minne blir ikke ettertanke, men autoritet."
+      - "Den svenske forfatteren Göran Rosenberg skjærer gjennom tåken med spørsmålet: Hvordan opprettholde et samfunnsfellesskap som ikke bygger på likhet, men på ulikhet?"
+      - "Demokratier hviler ikke bare på abstrakte prinsipper, men også på kulturelle vaner og fordommer: Økende mangfold blir derfor utfordrende i samfunn som lenge har vært vant til at borgerne stort sett har delt samme kultur."
+      - "For individualismen han bekymrer seg for, produseres ikke først og fremst i seminarer, men i digitale infrastrukturer: algoritmisk belønnet, kommersielt optimalisert, kontinuerlig forsterket."
+      - "Den er ikke i første rekke et idéprosjekt, men et systemutfall."
+
+  - dato: "2026-01-10"
+    antall: 0
+    setninger_totalt: 86
+    prosent_ikke_men: "0%"
+    publ_dato: "2025-12-12"
+    skribent: "Bengt Andersen"
+    avis: "Aftenposten"
+    url: "https://www.aftenposten.no/meninger/debatt/i/2pGXRq/det-usynlige-stoffet-som-asle-toje-skriver-om-virker-aa-ha-reell-be"
+    setninger:
+      []
+
+  - dato: "2026-01-10"
+    antall: 2
+    setninger_totalt: 97
+    prosent_ikke_men: "2.1%"
+    publ_dato: "2025-12-12"
+    skribent: "Asle Toje"
+    avis: "Aftenposten"
+    url: "https://www.aftenposten.no/meninger/debatt/i/L4Ad1P/selvgratulerende-skivebom"
+    setninger:
+      - "Når jeg skriver at «svært mange ikke er norske i kulturell forstand», sikter jeg ikke til innsatsvilje, moral eller menneskeverd, men til kjennskap til felles referanser, institusjoner og normer."
+      - "Å påpeke dette er ikke å trekke opp en uoppnåelig terskel, men å beskrive et faktisk vilkår for et fungerende demokrati."
+
+  - dato: "2026-01-10"
+    antall: 0
+    setninger_totalt: 114
+    prosent_ikke_men: "0%"
+    publ_dato: "2025-12-12"
+    skribent: "Hilde Sandvik"
+    avis: "Aftenposten"
+    url: "https://www.aftenposten.no/meninger/debatt/i/e78XvO/ti-spoersmaal-til-asle-toje"
+    setninger:
+      []
+
+  - dato: "2026-01-10"
+    antall: 1
+    setninger_totalt: 130
+    prosent_ikke_men: "0.8%"
+    publ_dato: "2025-12-12"
+    skribent: "Mozzie Marvati"
+    avis: "Aftenposten"
+    url: "https://www.aftenposten.no/meninger/debatt/i/43q0RV/jeg-er-sivilisasjonskollapsen-asle-toje-advarer-om"
+    setninger:
+      - "Ikke fordi jeg måtte, men fordi jeg ville."
+
+  - dato: "2026-01-10"
+    antall: 11
+    setninger_totalt: 128
+    prosent_ikke_men: "8.6%"
+    publ_dato: "2025-12-27"
+    skribent: "Asle Toje"
+    avis: "Aftenposten"
+    url: "https://www.aftenposten.no/meninger/debatt/i/WvbJrd/hva-er-det-vaare-ungdommer-skal-kjempe-for"
+    setninger:
+      - "Når jeg beskriver nasjonen som mer enn institusjoner, er det ikke for å undergrave statsborgerskapets likhet, men for å peke på et grunnleggende poeng i politisk teori og sosiologi: Rettigheter fungerer ikke i et sosialt vakuum."
+      - "Rettsstaten forutsetter normer, språk, tillit og uformelle forventninger som ikke kan lovfestes fullt ut, men som likevel er avgjørende for at lovene etterleves."
+      - "Å beskrive dette er ikke å etablere et rangerende «vi», men å beskrive fellesskapet."
+      - "Struktur og kultur er ikke alternative forklaringer, men gjensidig forsterkende nivåer."
+      - "«Kulturell forstand» viser i teksten ikke til temperament, dialekt, lokal skikk eller regional tilhørighet, men til kjennskap til språk, institusjoner, normer og felles referanser."
+      - "Integrasjon er ikke et ensidig krav til «de andre», men en gjensidig prosess"
+      - "Dette er ikke særkrav rettet mot minoriteter, men forutsetninger som også gjelder majoriteten."
+      - "Integrasjon er ikke et ensidig krav til «de andre», men en gjensidig prosess som forutsetter både deltagelse og institusjonell tydelighet."
+      - "Å påpeke utfordringer knyttet til dette er ikke å plassere skyld, men å erkjenne et felles ansvar."
+      - "Min kronikk var ikke ment som et politisk utspill, men som en refleksjon over historiske mønstre."
+      - "Å insistere på dette er ikke å nære frykt, men å ta samfunnets langsiktige bærekraft på alvor."
+
+
+  - dato: "2026-01-10"
+    antall: 3
+    setninger_totalt: 113
+    prosent_ikke_men: "2.7%"
+    publ_dato: ""
+    skribent: "Marta Bivand Erdal"
+    avis: "Aftenposten"
+    url: "https://www.aftenposten.no/meninger/debatt/i/GxGPoQ/svarer-asle-toje-en-norskhet-som-bygger-fellesskap-eller-naerer-frykt"
+    setninger:
+      - "Derfor er nasjonens liv ikke skjebne, men arbeid."
+      - "Spørsmålet er ikke urimelig, men det er litt lettvint å ta det opp for så å gå videre."
+      - "Geografi er ikke nok, greit, men du verden for en forskjell det gjør, ikke minst her i Norge hvor vi jo er mer opptatt av hvor vi er fra i Norge, enn mange andre ting ved hverandre."
+
+  - dato: "2026-01-10"
+    antall: 4
+    setninger_totalt: 127
+    prosent_ikke_men: "3.1%"
+    publ_dato: ""
+    skribent: "\"Kutz Schmeiner\""
+    avis: "Aftenposten"
+    url: "https://web.archive.org/web/20260108135603/https://www.aftenposten.no/meninger/debatt/i/aJwVLE/ikke-vaer-redd-for-det-ubehagelige"
+    setninger:
+      - "Ikke først og fremst på grunn av fiender utenfra, men fordi evnen til å snakke sant om"
+      - "Ikke mot mangfold i seg selv, men mot forestillingen"
+      - "uten felles språk, normer og mål går ikke konkurs av ond vilje, men av indre"
+      - "Derfor angripes ikke argumentene, men motivene."
+
+
+
