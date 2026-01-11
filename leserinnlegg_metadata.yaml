@@ -1,5 +1,5 @@
-# orekomsten av setninger med konstruksjonen "ikke...., men...." i debattinnlegg i norske aviser
-# Data er laget ved å klippe og lime
+# Forekomsten av setninger med konstruksjonen "ikke...., men...." i debattinnlegg i norske aviser
+# Data er laget ved å klippe og lime tekst på siden ikke-men.html - se https://github.com/jilltxt/ikke-men
 
 analyser:
   - dato: "2026-01-10"
