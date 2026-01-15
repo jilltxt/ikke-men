@@ -1,5 +1,5 @@
 # ikke-men
-Er det med KI-slafs i debattinnlegg nå for tiden? Her har du en svært enkel html-fil du kan åpne i nettleseren din som lar deg lime inn en tekst - f.eks. et debattinnlegg - så får du ut en liste med setninger med et typisk trekk ved tekster generert av språkmodeller: setninger med mønsteret ikke X, men Y.
+Er det mer KI-slafs i debattinnlegg nå for tiden? Her har du en svært enkel html-fil du kan åpne i nettleseren din som lar deg lime inn en tekst - f.eks. et debattinnlegg - så får du ut en liste med setninger med et typisk trekk ved tekster generert av språkmodeller: setninger med mønsteret ikke X, men Y.
 
 ## Hvordan bruke
 Filen 'ikke-men.html' åpnes i en nettleser. Koden er stort sett generert ved hjelp av ChatGPT.
